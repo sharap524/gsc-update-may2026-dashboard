@@ -566,7 +566,7 @@
 
   <div class="finding">
     <h3>Главный insight</h3>
-    <p>Решающий фактор — <strong>накопленная авторитетность сайта во времени</strong>, а не калибр свежих размещений. У anonyig 22 месяца непрерывного link-building (264 размещения, 35.6% brand-анкоров). У picuki и sssinstagram — 2 месяца и 0.4 месяца кампании. На May Update Google переоценивает накопленные trust signals — сайт без длительной истории не получает выгоды от свежих ссылок.</p>
+    <p>Решающий фактор — <strong>накопленная авторитетность сайта во времени</strong> и <strong>растянутая мульти-языковая кампания</strong>. У anonyig 22 мес непрерывной работы — <strong>293 размещения (264 DB + 29 off-DB Tier 1 через prnews.io)</strong>, 41% brand-анкоров, доноры до DR 94 (Medium/Reuters/MarketWatch/APNews/Kaggle). У остальных 3 сайтов 21-57 размещений и сильно меньшая глубина. На May Update Google переоценивает накопленные trust signals — сайт без длительной истории не получает выгоды от свежих ссылок.</p>
   </div>
 
   <div class="kpi-grid">
@@ -596,95 +596,194 @@
 <!-- SECTION 2: CAMPAIGN VOLUME -->
 <section>
   <h2><span class="num">02</span>Объём и история кампаний</h2>
-  <p>Цифры в БД <code>linkbuilding_agent_2.orders</code> (учтённые размещения) плюс ~25-30 размещений Feb 2026 wave, прошедшие мимо системы (Reuters, Patch, TheStreet, APNews, BeforeItsNews и т.д., предоставлены оператором).</p>
+  <p>Цифры собраны из двух источников: <code>linkbuilding_agent_2.orders</code> (Adsy-кампания, DB-tracked) и операторской таблицы prnews.io размещений (off-DB). <strong>Все off-DB ссылки детально перечислены в Section 03.</strong></p>
 
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th>Сайт</th>
-          <th class="num">Всего размещений (lifetime)</th>
-          <th class="num">До 2026</th>
-          <th class="num">В 2026 (DB)</th>
-          <th class="num">+ off-DB Feb 2026</th>
-          <th class="num">Длительность</th>
-          <th class="num">Brand-анкоров</th>
+          <th class="num">Всего lifetime</th>
+          <th class="num">До 2026 (DB)</th>
+          <th class="num">2026 DB</th>
+          <th class="num">2026 off-DB</th>
+          <th class="num">Длительность 2026</th>
+          <th class="num">Brand-анкоров %</th>
           <th class="num">Уник анкоров</th>
-          <th class="num">Расход 2026</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>anonyig.com</strong></td>
-          <td class="num">264</td>
+          <td class="num"><strong>293</strong></td>
           <td class="num">258</td>
           <td class="num">6</td>
-          <td class="num">~25</td>
-          <td class="num">21.8 мес</td>
-          <td class="num">35.6%</td>
-          <td class="num">27</td>
-          <td class="num">$1,063</td>
+          <td class="num">29</td>
+          <td class="num">5 мес (Dec'25-Apr'26)</td>
+          <td class="num"><strong>41.3%</strong></td>
+          <td class="num">27+</td>
         </tr>
         <tr>
           <td><strong>igram.world</strong></td>
-          <td class="num">53</td>
+          <td class="num">57</td>
           <td class="num">38</td>
           <td class="num">13</td>
-          <td class="num">~3</td>
-          <td class="num">37.8 мес</td>
-          <td class="num">28.3%</td>
+          <td class="num">4</td>
+          <td class="num">1 мес (Feb–May)</td>
+          <td class="num">29.8%</td>
           <td class="num">16</td>
-          <td class="num">$700</td>
         </tr>
         <tr>
           <td><strong>picuki.site</strong></td>
-          <td class="num">16</td>
+          <td class="num">21</td>
           <td class="num">0</td>
           <td class="num">14</td>
-          <td class="num">~5</td>
-          <td class="num">2.2 мес</td>
-          <td class="num">6.2%</td>
+          <td class="num">5</td>
+          <td class="num">3 мес (Feb–May)</td>
+          <td class="num"><strong>28.6%</strong> ↑</td>
           <td class="num">6</td>
-          <td class="num">$905</td>
         </tr>
         <tr>
           <td><strong>sssinstagram.com</strong></td>
-          <td class="num">28</td>
+          <td class="num">32</td>
           <td class="num">0</td>
           <td class="num">28</td>
-          <td class="num">~4</td>
-          <td class="num">0.4 мес</td>
-          <td class="num">0.0%</td>
+          <td class="num">4</td>
+          <td class="num">4 мес (Jan–May)</td>
+          <td class="num">9.4%</td>
           <td class="num">7</td>
-          <td class="num">$1,537</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="callout">
-    <strong>Реальность калибра доноров:</strong> Средний DR (Ahrefs) у всех сайтов высокий — 67-77. То есть все используют примерно одинаковый пул Tier 1 доноров через Adsy. Разница не в калибре, а в <strong>совокупном объёме за время</strong> и <strong>распределении</strong>.
+  <div class="callout success">
+    <strong>Главная корректировка по off-DB:</strong> У picuki brand% действительно 28.6% (а не 6%), благодаря 5 Tier 1 brand-размещениям в Feb (iplocation, greenrecord, speakrj, filmdaily, ecommercefastlane). У anonyig в off-DB — настоящие Tier 1 ракеты (medium DR94, marketwatch DR92, reuters DR92, kaggle DR90, apnews DR91). Sssinstagram получил APNews/CMC brand-анкоры в апреле.
   </div>
 
-  <h3 style="margin-top:32px">Среднее DR доноров (2026 DB-tracked)</h3>
+  <h3 style="margin-top:32px">Реально топовые off-DB доноры (DR 80+) — расценка vs ценность</h3>
   <div class="table-wrap">
     <table>
       <thead>
-        <tr><th>Сайт</th><th class="num">Avg DR</th><th class="num">Min</th><th class="num">Max</th><th class="num">Tier 1 (DR 60+)</th><th class="num">Tier 2 (DR 40-59)</th></tr>
+        <tr><th>Сайт</th><th>Tier 1 доноры (DR 80+) — placed</th><th class="num">Кол-во</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>anonyig.com</strong></td><td class="num">73.7</td><td class="num">73</td><td class="num">75</td><td class="num">3</td><td class="num">0</td></tr>
-        <tr><td><strong>igram.world</strong></td><td class="num">77.4</td><td class="num">57</td><td class="num">92</td><td class="num">11</td><td class="num">2</td></tr>
-        <tr><td><strong>picuki.site</strong></td><td class="num">72.6</td><td class="num">47</td><td class="num">92</td><td class="num">13</td><td class="num">1</td></tr>
-        <tr><td><strong>sssinstagram.com</strong></td><td class="num">67.5</td><td class="num">51</td><td class="num">90</td><td class="num">21</td><td class="num">7</td></tr>
+        <tr><td><strong>anonyig.com</strong></td><td>medium.com (DR94), marketwatch.com (DR92), reuters.com (DR92), patreon.com (DR93, Oct), kaggle.com (DR90), apnews.com (DR91), coinmarketcap.com (DR90), thestreet.com (DR86), tvprime.correiobraziliense.com.br (DR81), financialcontent.com (DR81), techbullion.com (DR80), diariodeavisos.elespanol.com (DR85)</td><td class="num">12+</td></tr>
+        <tr><td><strong>sssinstagram.com</strong></td><td>apnews.com (DR91), coinmarketcap.com (DR90)</td><td class="num">2</td></tr>
+        <tr><td><strong>igram.world</strong></td><td>coinmarketcap.com (DR90), techbullion.com (DR80)</td><td class="num">2</td></tr>
+        <tr><td><strong>picuki.site</strong></td><td>(нет DR ≥ 80 в off-DB; DB houzz.com DR92 + bookshop.org DR91)</td><td class="num">0 off-DB</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- SECTION 3: TIMELINE -->
+<!-- SECTION 2B: OFF-DB DETAIL -->
 <section>
-  <h2><span class="num">03</span>Timeline кампаний 2024-2026</h2>
+  <h2><span class="num">03</span>Off-DB размещения детально</h2>
+  <p>Все размещения через prnews.io канал, не учтённые в БД <code>linkbuilding_agent_2.orders</code>. Статус placed = "Размещено", не учтены rejected/canceled.</p>
+
+  <h3>anonyig.com — 29 off-DB размещений (Dec 2025 → Apr 2026)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Месяц</th><th>Донор</th><th class="num">DR</th><th>GEO</th><th>Анкор</th><th>Таргет</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dec'25</td><td>apnews.com</td><td class="num">91</td><td class="country">US</td><td class="anchor">instagram story viewer</td><td>/en1/</td></tr>
+        <tr><td>Dec'25</td><td>coinmarketcap.com</td><td class="num">90</td><td class="country">US</td><td class="anchor">instagram story viewer</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>marketwatch.com</td><td class="num">92</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>reuters.com</td><td class="num">92</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>kaggle.com</td><td class="num">90</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>hardreset.info</td><td class="num">58</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>socialmediagirlsforum.co.uk</td><td class="num">54</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Jan'26</td><td>wikitechlibrary.com</td><td class="num">33</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>/en1/</td></tr>
+        <tr><td>Feb'26</td><td>medium.com</td><td class="num">94</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>techbullion.com</td><td class="num">80</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>findarticles.com</td><td class="num">79</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>beforeitsnews.com</td><td class="num">74</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>advfn.com</td><td class="num">73</td><td class="country">UK</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>techloy.com</td><td class="num">65</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Feb'26</td><td>mixvale.com.br</td><td class="num">60</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Mar'26</td><td>tapinto.net</td><td class="num">79</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Mar'26</td><td>uai.com.br</td><td class="num">73</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Mar'26</td><td>periodistadigital.com</td><td class="num">73</td><td class="country">ES</td><td class="anchor brand">AnonyIG</td><td>/es/</td></tr>
+        <tr><td>Mar'26</td><td>apsense.com</td><td class="num">73</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Mar'26</td><td>naciodigital.cat</td><td class="num">72</td><td class="country">ES</td><td class="anchor brand">AnonyIG</td><td>/es/</td></tr>
+        <tr><td>Mar'26</td><td>bemparana.com.br</td><td class="num">71</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Mar'26</td><td>prnews.io</td><td class="num">70</td><td class="country">ES</td><td class="anchor brand">AnonyIG</td><td>/es/</td></tr>
+        <tr><td>Mar'26</td><td>seucreditodigital.com.br</td><td class="num">63</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Mar'26</td><td>midiamax.com.br</td><td class="num">60</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Mar'26</td><td>elsol.com.ar</td><td class="num">60</td><td class="country">ES-AR</td><td class="anchor brand">AnonyIG</td><td>/es/</td></tr>
+        <tr><td>Mar'26</td><td>arede.info</td><td class="num">47</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Mar'26</td><td>portaldozacarias.com.br</td><td class="num">44</td><td class="country">BR</td><td class="anchor brand">AnonyIG</td><td>/pt/</td></tr>
+        <tr><td>Apr'26</td><td>thestreet.com</td><td class="num">86</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+        <tr><td>Apr'26</td><td>resident.com</td><td class="num">72</td><td class="country">US</td><td class="anchor brand">AnonyIG</td><td>anonyig.com</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout success">
+    <strong>Это объясняет успех anonyig:</strong> 29 brand-доминантных размещений на топовых медиа за 5 мес растянуто, мультиязычно (EN/PT/ES). К моменту May Update (21.05.2026) этим ссылкам было от 1 до 5 месяцев — достаточно для индексации и переоценки authority. Реально это <strong>главный двигатель</strong> роста.
+  </div>
+
+  <h3>sssinstagram.com — 4 off-DB размещения</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Месяц</th><th>Донор</th><th class="num">DR</th><th>GEO</th><th>Анкор</th><th>Таргет</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jan'26</td><td>beforeitsnews.com</td><td class="num">74</td><td class="country">US</td><td class="anchor brand">SSSInstagram</td><td>/en1/video-downloader</td></tr>
+        <tr><td>Jan'26</td><td>socialmediagirlsforum.co.uk</td><td class="num">54</td><td class="country">US</td><td class="anchor">instagram video downloader</td><td>/en1/video-downloader</td></tr>
+        <tr><td>Apr'26</td><td>apnews.com</td><td class="num">91</td><td class="country">US</td><td class="anchor brand">SSSInstagram</td><td>/en1</td></tr>
+        <tr><td>Apr'26</td><td>coinmarketcap.com</td><td class="num">90</td><td class="country">US</td><td class="anchor brand">SSSInstagram</td><td>/en1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <strong>Качество хорошее, но объёма мало.</strong> 2 Tier 1 (APNews + CMC) только в апреле — лаг до May Update всего 4 недели, мало для индексации. К тому же все 4 на EN-страницы /en1/, что не объясняет лифт в BRA по <code>baixar video instagram</code>.
+  </div>
+
+  <h3>igram.world — 4 off-DB (все 26 фев одним днём)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Месяц</th><th>Донор</th><th class="num">DR</th><th>GEO</th><th>Анкор</th><th>Таргет</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>26.02</td><td>coinmarketcap.com</td><td class="num">90</td><td class="country">US</td><td class="anchor brand">Igram</td><td>/story-saver</td></tr>
+        <tr><td>26.02</td><td>techbullion.com</td><td class="num">80</td><td class="country">US</td><td class="anchor brand">Igram</td><td>/story-saver</td></tr>
+        <tr><td>26.02</td><td>findarticles.com</td><td class="num">79</td><td class="country">US</td><td class="anchor">instagram story downloader</td><td>/story-saver</td></tr>
+        <tr><td>26.02</td><td>beforeitsnews.com</td><td class="num">74</td><td class="country">US</td><td class="anchor">instagram story download</td><td>/story-saver</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <strong>Антипаттерн coordinated batch:</strong> 4 размещения в один день (26.02) на 4 разных Tier 1 донорах + ещё 4 размещения 26 марта (через Adsy: houzz, bookshop, iheart, ed.ted) — Google детектирует такие синхронные публикации как unnatural link velocity. Эффект authority обнуляется или становится отрицательным.
+  </div>
+
+  <h3>picuki.site — 5 off-DB (все Feb 2026, brand-анкоры)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Месяц</th><th>Донор</th><th class="num">DR</th><th>GEO</th><th>Анкор</th><th>Таргет</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Feb'26</td><td>iplocation.net</td><td class="num">77</td><td class="country">US</td><td class="anchor brand">Picuki</td><td>/</td></tr>
+        <tr><td>Feb'26</td><td>greenrecord.co.uk</td><td class="num">73</td><td class="country">US</td><td class="anchor brand">Picuki</td><td>/</td></tr>
+        <tr><td>Feb'26</td><td>speakrj.com</td><td class="num">73</td><td class="country">US</td><td class="anchor brand">Picuki</td><td>/</td></tr>
+        <tr><td>Feb'26</td><td>ecommercefastlane.com</td><td class="num">73</td><td class="country">US</td><td class="anchor brand">Picuki</td><td>/</td></tr>
+        <tr><td>Feb'26</td><td>filmdaily.co</td><td class="num">71</td><td class="country">US</td><td class="anchor brand">Picuki</td><td>/</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <strong>Эти 5 brand-ссылок я раньше не видел.</strong> Они дают picuki приличный brand boost в Feb 2026 (DR 71-77, все на «Picuki» брендовый анкор → /). Но <strong>все 5 в один месяц на одинаковых типах статей</strong> — снова coordinated pattern. Плюс aggregator-классификация продолжает работать против picuki независимо от качества ссылок.
+  </div>
+</section>
+
+<!-- SECTION 4: TIMELINE -->
+<section>
+  <h2><span class="num">04</span>Timeline кампаний 2024-2026</h2>
   <p>Когда заказывали ссылки vs когда был Update. Серая полоса = месяцы активного заказа, цвет = объём.</p>
 
   <div class="timeline">
@@ -746,9 +845,9 @@
   </div>
 </section>
 
-<!-- SECTION 4: PER-SITE DETAIL -->
+<!-- SECTION 5: PER-SITE DETAIL -->
 <section>
-  <h2><span class="num">04</span>Per-site: ссылки × позиции</h2>
+  <h2><span class="num">05</span>Per-site: ссылки × позиции</h2>
 
   <!-- ANONYIG -->
   <div class="site-card">
@@ -758,8 +857,8 @@
     </div>
     <div class="site-meta-grid">
       <div class="meta-item">
-        <div class="meta-label">Главный купленный кластер</div>
-        <div class="meta-val">story_viewer<small>109× анкоров (DB+offDB)</small></div>
+        <div class="meta-label">Всего размещений</div>
+        <div class="meta-val">293<small>264 DB + 29 off-DB</small></div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Глобальный рост 3 мес</div>
@@ -771,7 +870,7 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Brand-анкоры</div>
-        <div class="meta-val">35.6%<small>защитный сигнал</small></div>
+        <div class="meta-val">41.3%<small>121/293 — золотой стандарт</small></div>
       </div>
     </div>
 
@@ -819,8 +918,8 @@
     </div>
     <div class="site-meta-grid">
       <div class="meta-item">
-        <div class="meta-label">Главный купленный кластер</div>
-        <div class="meta-val">instagram_download<small>17× коммерческих анкоров</small></div>
+        <div class="meta-label">Всего размещений</div>
+        <div class="meta-val">32<small>28 DB + 4 off-DB</small></div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Самый сильный эффект</div>
@@ -832,7 +931,7 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Brand-анкоры</div>
-        <div class="meta-val">0.0%<small>⚠️ красная зона</small></div>
+        <div class="meta-val">9.4%<small>3/32 (APNews/CMC/BFN)</small></div>
       </div>
     </div>
 
@@ -880,8 +979,8 @@
     </div>
     <div class="site-meta-grid">
       <div class="meta-item">
-        <div class="meta-label">Главный купленный кластер</div>
-        <div class="meta-val">instagram_viewer<small>12× коммерческих, 1× brand</small></div>
+        <div class="meta-label">Всего размещений</div>
+        <div class="meta-val">21<small>16 DB + 5 off-DB</small></div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Главный рынок (USA)</div>
@@ -893,7 +992,7 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Brand-анкоры</div>
-        <div class="meta-val">6.2%<small>⚠️ красная зона</small></div>
+        <div class="meta-val">28.6%<small>↑ исправлено: 6/21 включая 5 off-DB</small></div>
       </div>
     </div>
 
@@ -942,8 +1041,8 @@
     </div>
     <div class="site-meta-grid">
       <div class="meta-item">
-        <div class="meta-label">Главный купленный кластер</div>
-        <div class="meta-val">instagram_story<small>16× anchors story-*</small></div>
+        <div class="meta-label">Всего размещений</div>
+        <div class="meta-val">57<small>53 DB + 4 off-DB</small></div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Главный запрос IND</div>
@@ -955,7 +1054,7 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Brand-анкоры</div>
-        <div class="meta-val">0%*<small>+15 naked URL = 28% diversity</small></div>
+        <div class="meta-val">29.8%<small>17/57 (включая 15 naked URL)</small></div>
       </div>
     </div>
 
@@ -998,9 +1097,9 @@
   </div>
 </section>
 
-<!-- SECTION 5: CROSS-SITE COMPARISON -->
+<!-- SECTION 6: CROSS-SITE COMPARISON -->
 <section>
-  <h2><span class="num">05</span>Сравнение по факторам успеха</h2>
+  <h2><span class="num">06</span>Сравнение по факторам успеха</h2>
 
   <div class="compare-grid">
     <div class="head">Фактор</div>
@@ -1016,22 +1115,22 @@
     <div>37.8 мес (редко) ⚠</div>
 
     <div class="row-label">Всего размещений</div>
-    <div>264 + 25 offDB</div>
-    <div>28 + 4 offDB</div>
-    <div>16 + 5 offDB</div>
-    <div>53 + 3 offDB</div>
+    <div><strong>293</strong> (264 DB + 29 offDB)</div>
+    <div>32 (28 DB + 4 offDB)</div>
+    <div>21 (16 DB + 5 offDB)</div>
+    <div>57 (53 DB + 4 offDB)</div>
 
     <div class="row-label">Brand-анкоры %</div>
-    <div>35.6% ✓</div>
-    <div>0% ✗</div>
-    <div>6.2% ✗</div>
-    <div>28.3% ✓</div>
+    <div><strong>41.3%</strong> ✓✓</div>
+    <div>9.4% ⚠</div>
+    <div>28.6% ↑</div>
+    <div>29.8% ✓</div>
 
-    <div class="row-label">Tier 1 доноров (DR 60+)</div>
-    <div>Reuters/Patch/TheStreet (off-DB)</div>
-    <div>APNews/BeforeItsNews (off-DB)</div>
-    <div>TechBullion (Mar)</div>
-    <div>TechBullion (Feb)</div>
+    <div class="row-label">Tier 1 доноров (DR 80+) off-DB</div>
+    <div>medium DR94, marketwatch DR92, reuters DR92, apnews DR91, kaggle DR90, cmc DR90, thestreet DR86, techbullion DR80 — <strong>8 шт</strong></div>
+    <div>apnews DR91, cmc DR90 — 2 шт</div>
+    <div>(0 в off-DB, есть в DB: houzz DR92, bookshop DR91)</div>
+    <div>cmc DR90, techbullion DR80 — 2 шт</div>
 
     <div class="row-label">Распределение во времени</div>
     <div>растянуто ✓</div>
@@ -1059,9 +1158,9 @@
   </div>
 </section>
 
-<!-- SECTION 6: KEY PATTERNS -->
+<!-- SECTION 7: KEY PATTERNS -->
 <section>
-  <h2><span class="num">06</span>Закономерности</h2>
+  <h2><span class="num">07</span>Закономерности</h2>
 
   <div class="method-grid">
     <div class="method-card">
@@ -1091,9 +1190,9 @@
   </div>
 </section>
 
-<!-- SECTION 7: RECOMMENDATIONS -->
+<!-- SECTION 8: RECOMMENDATIONS -->
 <section>
-  <h2><span class="num">07</span>Рекомендации по сайтам</h2>
+  <h2><span class="num">08</span>Рекомендации по сайтам</h2>
 
   <div class="rec-grid">
     <div class="rec-card">
@@ -1147,7 +1246,7 @@
 
 <!-- METHODOLOGY -->
 <section>
-  <h2><span class="num">08</span>Методология</h2>
+  <h2><span class="num">09</span>Методология</h2>
   <div class="method-grid">
     <div class="method-card">
       <h5>Источники данных</h5>
@@ -1163,7 +1262,7 @@
     </div>
     <div class="method-card">
       <h5>Off-DB размещения</h5>
-      <p>Reuters, Patch, TheStreet, APNews, BeforeItsNews и др. — даты проверены через WebFetch публикаций. ~30-35 URL общим, не учтены в orders таблице.</p>
+      <p>42 размещения через prnews.io канал (Dec'25–Apr'26) — НЕ в orders.table, но <strong>включены в все расчёты</strong> brand%, totals, Tier 1 счётчиков и т.д. Детально перечислены в Section 03 с DR, GEO, анкорами и таргет-URL по каждому.</p>
     </div>
     <div class="method-card">
       <h5>Tier классификация</h5>
